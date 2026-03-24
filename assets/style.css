@@ -1,0 +1,187 @@
+/* Wrapper */
+.tx-form-wrapper {
+  max-width: 650px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  font-family: "Inter", sans-serif;
+}
+
+/* Header */
+.tx-header {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.tx-header h2 {
+  margin: 30px 0 0 0;
+  font-size: 22px !important;
+  color: #144796 !important;
+  font-weight: 700 !important;
+}
+
+.tx-header p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7a99;
+}
+
+/* Row Layout */
+.tx-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Fields */
+.tx-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.tx-field label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #4a5b7a;
+}
+
+/* Inputs */
+.tx-field input {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #d5deea;
+  background: #eef3fa;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+.tx-field input:focus {
+  border-color: #3b6ef5;
+  background: #fff;
+  outline: none;
+}
+
+/* Chips */
+.tx-field.chips-parent label {
+    margin-top: 20px;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chips span {
+  padding: 2px 10px;
+  border-radius: 20px;
+  background: #e8eef9;
+  border: 1px solid #c9d6f3;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.chips span.active {
+  background: #f58232;
+  color: #fff;
+  border-color: #f58232;
+}
+
+/* Checkbox */
+.tx-checkbox {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #6b7a99;
+}
+
+.tx-checkbox input {
+  margin-top: 3px;
+}
+.tx-form-smart-lead-plugin .tx-checkbox label {
+    font-size: 12px;
+    font-weight: normal;
+}
+.tx-checkbox a {
+  color: #144796;
+  text-decoration: none;
+}
+
+/* Button */
+.tx-form-smart-lead-plugin .tx-btn {
+  width: 100% !important;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  background: #1c3d7a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tx-btn:hover {
+  background: #163164;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .tx-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Message Styles */
+.tx-message {
+  display: none;
+  margin-top: 15px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: opacity 0.5s ease;
+}
+
+.tx-message.success {
+  background: #e6f7ee;
+  color: #1a7f4b;
+  border: 1px solid #b6e2c6;
+}
+
+.tx-message.error {
+  background: #fdecea;
+  color: #b42318;
+  border: 1px solid #f5c2c0;
+}
+
+/* Button Loading */
+.tx-form-wrapper button.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.tx-form-wrapper button.loading::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: translateY(-50%) rotate(360deg); }
+}
